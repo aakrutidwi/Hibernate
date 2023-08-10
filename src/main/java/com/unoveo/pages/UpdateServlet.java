@@ -34,25 +34,20 @@ public class UpdateServlet extends HttpServlet {
         PrintWriter pw = resp.getWriter();
         String id= req.getParameter("id");
         String name = req.getParameter("name");
-    Integer age= Integer.valueOf(req.getParameter("age"));
+        Integer age= Integer.valueOf(req.getParameter("age"));
         String city= req.getParameter("city");
-
-
 
         Employee employee = new Employee();
 
-
-employee.setName(name);
-employee.setAge(age);
-employee.setCity(city);
-
+          employee.setName(name);
+          employee.setAge(age);
+          employee.setCity(city);
 
 
-
-
+        System.out.println("method called");
 
         EmployeeDao dao = new EmployeeDao();
-        dao.saveOrUpdateStudent(employee);
+        dao.saveOrUpdateEmployee(employee);
 
 
     }

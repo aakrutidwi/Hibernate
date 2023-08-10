@@ -34,9 +34,6 @@ public class DeleteServlet extends HttpServlet {
 
         EmployeeDao dao = new EmployeeDao();
         dao.deleteUser(Integer.parseInt(id));
-
-
-
-
     }
+
 }

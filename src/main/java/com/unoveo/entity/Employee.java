@@ -7,28 +7,29 @@ import javax.persistence.Id;
 
 @Entity
 @javax.persistence.Table(name = "employee")
+
 public class Employee {
     @Id
     @GeneratedValue
-    private int Id;
+    private int id;
 
     @Column
-    private String name;
+    private  String name;
 
     @Column
-    private Integer age;
+    private  Integer age;
 
     @Column
-    private String city;
+    private  String city;
+
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
-
 
     public String getName() {
         return name;
@@ -38,7 +39,7 @@ public class Employee {
         this.name = name;
     }
 
-    public Integer getAge() {
+    public  Integer getAge() {
         return age;
     }
 
@@ -46,7 +47,7 @@ public class Employee {
         this.age = age;
     }
 
-    public String getCity() {
+    public  String getCity() {
         return city;
     }
 
@@ -55,14 +56,12 @@ public class Employee {
     }
 
     @Override
-    public String toString()
-
-    {
-        return  "Employee [employee name="
-                + name
-                + " , age=" + age
-                + " , city=" + city + "]";
-
-
+    public String toString() {
+        return "Employee{" +
+                "Id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", city='" + city + '\'' +
+                '}';
     }
 }
